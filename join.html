@@ -13,23 +13,51 @@
     }
 </style>
 
-<body>
+<body align="center">
 
     <fieldset>
         <legend>회원가입</legend>
-        <form action="join.php" method="POST">
-
-            회원가입
-            <p><label for="name">이름: </label>
-                <input id="name" type="text"></p>
+        <form action="main.php" method="POST">
 
             <p><label for="email">이메일: </label>
-                <input id="email" type="email"></p>
+                <input id="email" type="email" name="email"></p>
 
             <p><label for="password"">비밀번호: </label>
-                <input id=" password" type="password"></p>
+                    <input id=" password" type="password" name=""></p>
 
-            <input type="submit" value="전송">
+            <p><label for="name">이름: </label>
+                <input id="name" type="text" name="name"></p>
+
+            <p><label for="birthdate"">생년월일: </label>
+                <input id=" birthdate" type="date" name=""></p>
+
+            <p>
+                <span>거주지를 선택해주세요.</span>
+                <select name="address">
+                    <option value="서울">서울</option>
+                    <option value="경기도">경기도</option>
+                    <option value="인천">인천</option>
+                    <option value="충청도">충청도</option>
+                    <option value="강원도">강원도</option>
+                    <option value="전라도">전라도</option>
+                    <option value="경상도">경상도</option>
+                </select>
+            </p>
+
+            <div>
+                사진을 등록해 주세요.
+                <input type="file" value="img" name="img">
+            </div></br>
+
+            <div>
+                자기소개
+            </div>
+
+            <div>
+                <textarea rows="10" cols="50" name="introduction"></textarea>
+            </div></br>
+
+            <input type="submit" value="회원가입">
         </form>
     </fieldset>
 
