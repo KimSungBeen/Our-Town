@@ -47,7 +47,7 @@
         </div>
 
     <div id="menu">
-        <a href="community.html"><button>커뮤니티</button></a>
+        <a href="community.php"><button>커뮤니티</button></a>
         <a href="marketplace.html"><button>중고장터</button></a>
         <a href="news.html"><button>나눔</button></a>
         <a href="news.html"><button>뉴스</button></a>

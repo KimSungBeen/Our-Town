@@ -10,9 +10,8 @@
   $name = $_POST['name'];
   $memo = $_POST['memo'];
 
-  echo $date = date("YmdHis", time());
-  echo "<br>";
-  echo $ip=getenv("REMOTE_ADDR");
+  $date = date("YmdHis", time());
+  $ip = getenv("REMOTE_ADDR");
 
    $connect = mysqli_connect("localhost:3306", "root", "x#eYb@jHlGZErzWtKpeH", "beenDB"); //mysql 연결
    if (!$connect) {
@@ -27,5 +26,10 @@
 
    mysqli_close($connect);
   ?>
+
+  <script>
+    window. alert('정상적으로 처리 되었습니다.');
+    location.href='./community.html';
+  </script>
   </body>
 </html>
