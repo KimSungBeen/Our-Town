@@ -46,7 +46,7 @@
 
         //이전 페이지 그룹으로 이동
         if($page != 1) {
-            echo "<a href=$SELF_PHP?page=$prev_group> (<) </a> &nbsp; &nbsp;"
+            echo "<a href=$PHP_SELF?page=$prev_group> (<) </a> &nbsp; &nbsp;";
         }
 
         //페이지번호 생성
@@ -61,6 +61,11 @@
                 //PHP_SELF: 자기자신(PHP파일)에게 요청하고 응답
                 echo "<a href=$PHP_SELF?page=$page_num>$page_num</a> &nbsp; &nbsp;";
             }
+        }
+
+        //다음 페이지 그룹으로 이동
+        if($page != $total_page){
+            echo "<a href=$PHP_SELF?page=$next_group> (>) </a> &nbsp; &nbsp;";
         }
 
         //마지막페이지로 이동

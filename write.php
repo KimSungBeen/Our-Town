@@ -29,7 +29,7 @@
 
   <script>
     window. alert('정상적으로 처리 되었습니다.');
-    location.href='./community.php';
+    location.href='./community.php?page=1';
   </script>
   </body>
 </html>
