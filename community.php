@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>커뮤니티</title>
 </head>
+
+<style>
+    .btn-link {
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    color: #0000EE;
+    padding: 0;
+    font-family: inherit;
+    font-size: inherit;
+    text-decoration: none;
+}
+</style>
+
 <body bgcolor="#79ABFF">
     
 <a href="write.html"><button>글작성</button></a>
@@ -38,20 +52,30 @@
 
     //데이터 출력하기
     while($data = mysqli_fetch_array($result)) {
-
-            echo $data['no'].'. ';
-            echo '&nbsp &nbsp &nbsp';
-            echo '-이름: '.$data['name'];
-            echo '&nbsp &nbsp &nbsp';
-            echo '-이메일: '.$data['mail'];
-            echo '&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp';
-            echo $data['date'].'<br>';
-            echo '메모: '.$data['memo'];
-            echo '<hr size = 0.1>';
-
-    }
-    include('./page.php');
 ?>
+            <?php 
+                echo $data['no'].'. '; //게시글 번호
+                echo '&nbsp &nbsp &nbsp';
+                echo '-이름: '.$data['name'];
+                echo '&nbsp &nbsp &nbsp';
+                echo '-이메일: '.$data['mail'];
+                echo '&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp';
+                echo $data['date'].'<br>'; //날짜
+            ?>
+            
+            <br>
+
+            <!-- 게시글로 이동 -->
+            <form action="post_community.php" method="get"> <!-- style="float:left; margin:0;" 줄바꿈효과 제거-->
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <!-- 여백-->
+                <input type="hidden" name="no" value="<?php echo $data['no']?>"> <!--게시글의 번호 전달-->
+                <button type="submit" class="btn-link">[ <?php echo $data['memo'] ?> ]</button>
+            </form>
+
+            <?php echo '<hr size = 0.1>';?>
+            
+  <?php }?>
+    <?php include('./page.php'); ?>
 
 </body>
 </html>

@@ -36,8 +36,8 @@
 
     <div align=right>
         <?php
-            echo $_POST['email'].'<br>';
-            echo $_POST['name'].'님 반갑습니다';
+            echo $_POST['email'].'님 반갑습니다'.'<br>';
+            // echo $_POST['name'].'님 반갑습니다';
         ?>
     </div>
 
@@ -48,7 +48,7 @@
 
     <div id="menu">
         <form action="community.php" method="GET">
-            <input type="hidden" name="page" value="1">
+            <input type="hidden" name="page" value="1"> <!--페이지 번호 전달-->
             <input type="submit" value="커뮤니티">
         </form>
         <a href="marketplace.html"><button>장터</button></a>
