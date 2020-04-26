@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <title>글작성</title>
+</head>
+<style>
+    li {
+        list-style-type: none;
+    }
+</style>
+
+<body bgcolor="#79ABFF">
+
+    <fieldset>
+        <legend>글작성</legend>
+        <!--게시판-->
+        <form action="write.php" method="POST">
+
+            <li>이메일: <input type="email" name="mail"></li>
+            <li>이름: <input type="text" name="name"></li>
+            </br>
+            <li>메모: <textarea name="memo" cols="100" rows="5"></textarea></li>
+            </br>
+            </br>
+            <input type="submit" value="완료">
+
+        </form>
+        
+    </fieldset>
+</body>
+
+</html>
