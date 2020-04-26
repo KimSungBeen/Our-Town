@@ -51,7 +51,7 @@
             <input type="hidden" name="page" value="1">
             <input type="submit" value="커뮤니티">
         </form>
-        <a href="marketplace.html"><button>중고장터</button></a>
+        <a href="marketplace.html"><button>장터</button></a>
         <a href="news.html"><button>나눔</button></a>
         <a href="news.html"><button>뉴스</button></a>
     </div>
