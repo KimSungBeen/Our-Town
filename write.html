@@ -10,19 +10,28 @@
     }
 </style>
 
-<body bgcolor="#79ABFF">
+<body bgcolor="#79ABFF" style= "display: flex">
 
     <fieldset>
         <legend>글작성</legend>
         <!--게시판-->
         <form action="write.php" method="POST">
 
-            <li>이메일: <input type="email" name="mail"></li>
-            <li>이름: <input type="text" name="name"></li>
-            </br>
-            <li>메모: <textarea name="memo" cols="100" rows="5"></textarea></li>
-            </br>
-            </br>
+            이름:&nbsp;<input type="text" name="name">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            이메일: <input type="email" name="mail">
+            <br>
+            <br>
+            제목
+            <br>
+            <textarea name="title" cols="100" rows="1"></textarea>
+            <br>
+            <br>
+            내용
+            <br>
+            <textarea name="memo" cols="100" rows="5"></textarea>
+            <br>
+            <br>
             <input type="submit" value="완료">
 
         </form>

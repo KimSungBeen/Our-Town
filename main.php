@@ -36,22 +36,24 @@
 
     <div align=right>
         <?php
-            echo $_POST['email'].'<br>';
-            echo $_POST['name'].'님 반갑습니다';
+            echo $_POST['email'].'님 반갑습니다'.'<br>';
+            // echo $_POST['name'].'님 반갑습니다';
         ?>
     </div>
 
         <div id="banner">
-            <h1>배너</h1>
-
+            <lu>
+            <li><h1>지역 커뮤니티 사이트</h1></li>
+            <li style="text-align: center"><h2>Our-Town</h2></li>
+            </lu>
         </div>
 
     <div id="menu">
         <form action="community.php" method="GET">
-            <input type="hidden" name="page" value="1">
+            <input type="hidden" name="page" value="1"> <!--페이지 번호 전달-->
             <input type="submit" value="커뮤니티">
         </form>
-        <a href="marketplace.html"><button>중고장터</button></a>
+        <a href="marketplace.html"><button>장터</button></a>
         <a href="news.html"><button>나눔</button></a>
         <a href="news.html"><button>뉴스</button></a>
     </div>
