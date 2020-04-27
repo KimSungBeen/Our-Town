@@ -65,7 +65,7 @@
 
         //다음 페이지 그룹으로 이동
         if($page != $total_page){
-            echo "<a style='text-decoration: none;' href=$PHP_SELF?page=$next_group> ▶ </a> &nbsp; &nbsp;";
+            echo "<a style='text-decoration: none;' href=$PHP_SELF?page=$next_group> ▶ </a> &nbsp; &nbsp;"; //페이지번호 전송
         }
 
         //마지막페이지로 이동

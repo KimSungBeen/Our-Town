@@ -42,8 +42,10 @@
     </div>
 
         <div id="banner">
-            <h1>배너</h1>
-
+            <lu>
+            <li><h1>지역 커뮤니티 사이트</h1></li>
+            <li style="text-align: center"><h2>Our-Town</h2></li>
+            </lu>
         </div>
 
     <div id="menu">
